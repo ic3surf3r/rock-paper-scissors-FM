@@ -16,6 +16,7 @@ export default {
       "header-Outline-Color": "hsl(217, 16%, 45%)",
       "background-Start-Color": "hsl(214, 47%, 23%)",
       "background-end-Color": "hsl(237, 49%, 15%)",
+      white: "#fff",
     },
     fontFamily: {
       body: ['"Barlow Semi Condensed"', "sans-serif"],
