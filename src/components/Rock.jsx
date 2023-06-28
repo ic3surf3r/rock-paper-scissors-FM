@@ -1,7 +1,11 @@
 import rockIcon from "../assets/icon-rock.svg";
 
 function Rock() {
-  return <div>{rockIcon}</div>;
+  return (
+    <div>
+      <img src={rockIcon} alt="Rock" />
+    </div>
+  );
 }
 
 export default Rock;

@@ -17,6 +17,9 @@ export default {
       "background-Start-Color": "hsl(214, 47%, 23%)",
       "background-end-Color": "hsl(237, 49%, 15%)",
     },
+    fontFamily: {
+      body: ['"Barlow Semi Condensed"', "sans-serif"],
+    },
     extend: {},
   },
   plugins: [],
