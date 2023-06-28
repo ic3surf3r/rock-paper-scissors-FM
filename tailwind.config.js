@@ -20,7 +20,11 @@ export default {
     fontFamily: {
       body: ['"Barlow Semi Condensed"', "sans-serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+    },
   },
   plugins: [],
 };
