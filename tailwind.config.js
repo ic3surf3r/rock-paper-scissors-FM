@@ -3,8 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      "scissors-start": "hsl(39, 89%, 49%)",
-      "scissors-end": "hsl(40, 84%, 53%)",
+      "scissors-end": "hsl(39, 89%, 49%)",
+      "scissors-start": "hsl(40, 84%, 53%)",
+      "scissors-shadow": "#C76C1B",
       "paper-start": "hsl(230, 89%, 62%)",
       "paper-end": "hsl(230, 89%, 65%)",
       "rock-start": "hsl(349, 71%, 52%)",
@@ -17,6 +18,7 @@ export default {
       "background-Start-Color": "hsl(214, 47%, 23%)",
       "background-end-Color": "hsl(237, 49%, 15%)",
       white: "#fff",
+      "white-shadow": "#BBBFD2",
     },
     fontFamily: {
       body: ['"Barlow Semi Condensed"', "sans-serif"],

@@ -11,12 +11,27 @@ function App() {
     setScore(score + 1);
   };
 
+  const clearScore = () => {
+    setScore(0);
+  };
+
   return (
-    <div className="text-dark-Text-Color h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-background-Start-Color to-background-end-Color p-10">
+    <div className="flex flex-col text-center text-dark-Text-Color h-screen w-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-background-Start-Color to-background-end-Color p-10">
       <Header score={score} />
-      <h1 className="font-body">Rock Paper Scissors</h1>
-      <p className="font-body">YOU PICKED</p>
-      <button onClick={increaseScore}>+1</button>
+      <div className="flex space-x-3 mx-auto">
+        <button
+          className="bg-white rounded-md w-8 h-8 m-3"
+          onClick={increaseScore}
+        >
+          +1
+        </button>
+        <button
+          className="bg-white rounded-md w-12 h-8 m-3"
+          onClick={clearScore}
+        >
+          Clear
+        </button>
+      </div>
       <Rock />
       <Scissors />
       <Paper />
