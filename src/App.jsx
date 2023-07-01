@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Rock from "./components/Rock";
-import Scissors from "./components/Scissors";
-import Paper from "./components/Paper";
+import Grid from "./components/Grid";
 import Header from "./components/Header";
 
 function App() {
@@ -32,9 +30,7 @@ function App() {
           Clear
         </button>
       </div>
-      <Rock />
-      <Scissors />
-      <Paper />
+      <Grid />
     </div>
   );
 }
