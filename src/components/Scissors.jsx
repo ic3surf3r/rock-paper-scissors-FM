@@ -10,7 +10,7 @@ function Scissors() {
         >
           <div
             className="absolute rounded-full bg-white w-36 h-36
-            flex items-center justify-center z-10 bottom-2"
+            flex items-center justify-center z-10 bottom-3"
           >
             <img src={scissorsIcon} alt="Scissors" className="w-20" />
           </div>
