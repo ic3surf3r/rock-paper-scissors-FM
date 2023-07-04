@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
+import GameContext from "../context/GameContext";
 import logo from "../assets/logo.svg";
 import Score from "./Score";
 
-function Header({ score }) {
+function Header() {
+  const { score } = useContext(GameContext);
+
   return (
     <div
       className="flex justify-between rounded-lg border-4 border-solid border-header-Outline-Color w-10/12 lg:w-5/12
