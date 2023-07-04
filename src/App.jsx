@@ -2,9 +2,11 @@ import { useState } from "react";
 import Grid from "./components/Grid";
 import Header from "./components/Header";
 import Rules from "./components/Rules";
+import ReactModal from "react-modal";
 
 function App() {
   const [score, setScore] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const increaseScore = () => {
     setScore(score + 1);
