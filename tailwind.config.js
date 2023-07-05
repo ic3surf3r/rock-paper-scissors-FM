@@ -21,6 +21,9 @@ export default {
       "background-end-Color": "hsl(237, 49%, 15%)",
       white: "#fff",
       "white-shadow": "#BBBFD2",
+      "gradient-b1": "#2C3858",
+      "gradient-b2": "#263554",
+      "gradient-b3": "#213351",
     },
     fontFamily: {
       body: ['"Barlow Semi Condensed"', "sans-serif"],
