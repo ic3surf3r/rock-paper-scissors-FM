@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import GameContext from "../context/GameContext";
 import Grid from "./Grid";
-import Switch from "./Switch";
 import Scissors from "./Scissors";
 import Rock from "./Rock";
 import Paper from "./Paper";
@@ -39,7 +38,7 @@ function Game() {
   const bigButton = (choice) => {
     if (choice === "scissors") {
       return <Scissors />;
-    } else if (choice) {
+    } else if (choice === "rock") {
       return <Rock />;
     } else {
       return <Paper />;
