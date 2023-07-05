@@ -17,7 +17,7 @@ function Paper() {
         <div className="relative">
           <div
             className="relative rounded-full bg-gradient-to-b from-paper-start to-paper-end w-44 h-44
-      flex items-center justify-center z-20 cursor-pointer"
+      flex items-center justify-center z-20 cursor-pointer hover:-bottom-1"
             onClick={playPaper}
           >
             <div
