@@ -11,7 +11,8 @@ const gameReducer = (state, action) => {
     case "PLAYER_WON":
       return {
         ...state,
-        score: score + 1,
+        score: action.payload + 1,
+        winner: "",
       };
     case "PLAY_AGAIN":
       return {
