@@ -5,7 +5,7 @@ import bgTriangle from "../assets/bg-triangle.svg";
 
 function Grid() {
   return (
-    <div className="relative flex flex-col justify-center items-center">
+    <div className="relative flex flex-col justify-center items-center pt-7">
       <div
         className="grid grid-cols-3 grid-rows-2 w-10/12 lg:w-5/12
       mx-auto py-5 px-6 "

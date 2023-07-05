@@ -1,13 +1,24 @@
+import { useContext } from "react";
+import GameContext from "../context/GameContext";
+import { playGame } from "../functions/playGame";
 import paperIcon from "../assets/icon-paper.svg";
 
 function Paper() {
+  const { dispatch } = useContext(GameContext);
+
+  const playPaper = () => {
+    const data = playGame("paper");
+    dispatch({ type: "START_GAME", payload: data });
+  };
+
   return (
     <div>
       <div className="flex items-center justify-center">
         <div className="relative">
           <div
             className="relative rounded-full bg-gradient-to-b from-paper-start to-paper-end w-44 h-44
-      flex items-center justify-center z-20"
+      flex items-center justify-center z-20 cursor-pointer"
+            onClick={playPaper}
           >
             <div
               className="absolute rounded-full bg-white w-36 h-36

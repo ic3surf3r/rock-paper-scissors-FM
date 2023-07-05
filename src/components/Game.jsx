@@ -10,7 +10,7 @@ function Game() {
   }
 
   return (
-    <div>
+    <div className="text-white">
       player: {pChoice} vs computer: {cChoice}
     </div>
   );

@@ -19,8 +19,6 @@ export function playGame(input) {
     data.winner = "Computer Wins!";
   }
 
-  console.log(data);
-
   return data;
 }
 
