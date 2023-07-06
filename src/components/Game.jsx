@@ -50,21 +50,31 @@ function Game() {
   }
 
   return (
-    <>
+    <div className="flex flex-col justify-center items-center  font-body">
       <div className="text-white flex justify-center items-center gap-10 pt-48">
         <div className="flex flex-col">
           <p>YOU PICKED</p>
+          <br />
           {bigButton(pChoice)}
         </div>
-        <div>{displayWinner()}</div>
+        <div>
+          <div className="text-3xl">{displayWinner()}</div>
+          <br />
+          <div
+            onClick={playAgain}
+            className="text-playAgainColor bg-white rounded-md w-40 h-10 p-2 cursor-pointer"
+          >
+            PLAY AGAIN
+          </div>
+        </div>
         <div className="flex flex-col">
           <p>THE HOUSE PICKED</p>
+          <br />
           {bigButton(cChoice)}
         </div>
         {winner === "Player Wins!" && playerWon()}
       </div>
-      <div onClick={playAgain}>Play Again?</div>
-    </>
+    </div>
   );
 }
 

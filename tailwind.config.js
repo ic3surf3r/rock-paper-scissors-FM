@@ -24,6 +24,7 @@ export default {
       "gradient-b1": "#2C3858",
       "gradient-b2": "#263554",
       "gradient-b3": "#213351",
+      playAgainColor: "#CC5068",
     },
     fontFamily: {
       body: ['"Barlow Semi Condensed"', "sans-serif"],
