@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import GameContext from "../context/GameContext";
 import Grid from "./Grid";
 import PaperBig from "./PaperBig";
@@ -9,8 +9,12 @@ import WinButtonBackground from "./WinButtonBackground";
 function Game() {
   const { score, isPlaying, pChoice, cChoice, winner, dispatch } =
     useContext(GameContext);
+  const [pWon, setPWon] = useState(false);
+  const [cWon, setCWon] = useState(false);
 
-  let winnerScreen = "";
+  useEffect(() => {
+    displayWinner();
+  }, [isPlaying]);
 
   const playAgain = () => {
     dispatch({ type: "PLAY_AGAIN" });
@@ -23,30 +27,53 @@ function Game() {
 
   const displayWinner = () => {
     if (pChoice === cChoice) {
-      winnerScreen = "TIE";
+      setPWon(false);
+      setCWon(false);
+      return;
     } else if (
       (pChoice === "rock" && cChoice === "scissors") ||
       (pChoice === "paper" && cChoice === "rock") ||
       (pChoice === "scissors" && cChoice === "paper")
     ) {
-      winnerScreen = "YOU WIN";
+      setPWon(true);
+      setCWon(false);
+      return;
     } else {
-      winnerScreen = "YOU LOSE";
+      setCWon(true);
+      setPWon(false);
+      return;
     }
-    return winnerScreen;
   };
 
-  const bigButton = (choice) => {
+  const winningText = () => {
+    if (pWon) {
+      return "YOU WIN";
+    } else if (cWon) {
+      return "YOU LOSE";
+    } else {
+      return "TIE";
+    }
+  };
+
+  const bigButton = (choice, state) => {
     if (choice === "scissors") {
       return (
-        <WinButtonBackground>
+        <WinButtonBackground isVisible={state}>
           <ScissorsBig />
         </WinButtonBackground>
       );
     } else if (choice === "rock") {
-      return <RockBig />;
+      return (
+        <WinButtonBackground isVisible={state}>
+          <RockBig />
+        </WinButtonBackground>
+      );
     } else {
-      return <PaperBig />;
+      return (
+        <WinButtonBackground isVisible={state}>
+          <PaperBig />
+        </WinButtonBackground>
+      );
     }
   };
 
@@ -55,30 +82,28 @@ function Game() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center font-body">
-      <div className="text-white flex justify-center items-center gap-10 pt-48">
-        <div className="flex flex-col">
-          <p>YOU PICKED</p>
-          <br />
-          {bigButton(pChoice)}
-        </div>
-        <div>
-          <div className="text-3xl">{displayWinner()}</div>
-          <br />
-          <div
-            onClick={playAgain}
-            className="text-playAgainColor bg-white rounded-md w-40 h-10 p-2 cursor-pointer"
-          >
-            PLAY AGAIN
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <p>THE HOUSE PICKED</p>
-          <br />
-          {bigButton(cChoice)}
-        </div>
-        {winner === "Player Wins!" && playerWon()}
+    <div className="text-white font-body grid grid-cols-3 w-3/4 mx-auto">
+      <div className="flex flex-col justify-center items-center relative">
+        <p className="absolute top-1/4 z-50">YOU PICKED</p>
+        <div className="">{bigButton(pChoice, pWon)}</div>
       </div>
+
+      <div className="flex flex-col justify-center items-center">
+        <p className="text-3xl z-40">{winningText()}</p>
+        <br />
+        <div
+          onClick={playAgain}
+          className="text-playAgainColor bg-white rounded-md w-40 h-10 p-2 cursor-pointer z-40"
+        >
+          PLAY AGAIN
+        </div>
+      </div>
+      <div className="flex flex-col justify-center items-center relative">
+        <p className="absolute top-1/4 z-50">THE HOUSE PICKED</p>
+        <div className="">{bigButton(cChoice, cWon)}</div>
+      </div>
+
+      {winner === "Player Wins!" && playerWon()}
     </div>
   );
 }
