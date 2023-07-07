@@ -14,10 +14,13 @@ function Game() {
 
   useEffect(() => {
     displayWinner();
+  }, [isPlaying]);
+
+  useEffect(() => {
     if (pWon) {
       playerWon();
     }
-  }, [isPlaying]);
+  }, [pWon]);
 
   const playAgain = () => {
     dispatch({ type: "PLAY_AGAIN" });
