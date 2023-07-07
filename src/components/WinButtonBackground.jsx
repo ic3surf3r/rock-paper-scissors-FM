@@ -1,6 +1,6 @@
 function WinButtonBackground({ children, isVisible }) {
   return (
-    <div className="w-[35rem] h-[35rem] relative ">
+    <div className="w-[25rem] h-[25rem] md:w-[35rem] md:h-[35rem] relative ">
       {/* Largest circle */}
       <div
         className={`w-full h-full rounded-full absolute flex items-center justify-center ${

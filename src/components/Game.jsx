@@ -82,24 +82,24 @@ function Game() {
   }
 
   return (
-    <div className="text-white font-body grid grid-cols-3 w-3/4 mx-auto">
-      <div className="flex flex-col justify-center items-center relative">
-        <p className="absolute top-1/4 z-50">YOU PICKED</p>
+    <div className="text-white font-body grid grid-cols-3 w-4/5 xl:w-3/5 mx-auto ">
+      <div className="flex flex-col md:justify-center items-center relative">
+        <p className="absolute top-20 md:top-1/4 z-50">YOU PICKED</p>
         <div className="">{bigButton(pChoice, pWon)}</div>
       </div>
 
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-end sm:justify-center items-center ">
         <p className="text-3xl z-40">{winningText()}</p>
         <br />
         <div
           onClick={playAgain}
-          className="text-playAgainColor bg-white rounded-md w-40 h-10 p-2 cursor-pointer z-40"
+          className="text-playAgainColor bg-white rounded-sm w-40 h-10 p-2 cursor-pointer z-40"
         >
           PLAY AGAIN
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center relative">
-        <p className="absolute top-1/4 z-50">THE HOUSE PICKED</p>
+      <div className="flex flex-col md:justify-center items-center relative">
+        <p className="absolute top-20 md:top-1/4 z-50">THE HOUSE PICKED</p>
         <div className="">{bigButton(cChoice, cWon)}</div>
       </div>
 
