@@ -14,6 +14,9 @@ function Game() {
 
   useEffect(() => {
     displayWinner();
+    if (pWon) {
+      playerWon();
+    }
   }, [isPlaying]);
 
   const playAgain = () => {
@@ -102,8 +105,6 @@ function Game() {
         <p className="absolute top-20 md:top-1/4 z-50">THE HOUSE PICKED</p>
         <div className="">{bigButton(cChoice, cWon)}</div>
       </div>
-
-      {winner === "Player Wins!" && playerWon()}
     </div>
   );
 }
