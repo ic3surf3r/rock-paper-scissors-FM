@@ -7,8 +7,8 @@ function Grid() {
   return (
     <div className=" flex flex-col justify-center items-center pt-7 my-auto mx-auto">
       <div
-        className="grid grid-cols-3 grid-rows-2 w-10/12 
-      mx-auto py-5 px-6 "
+        className="grid grid-cols-3 grid-rows-2 gap-12 md:w-10/12 
+      mx-auto md:py-5 md:px-6 "
       >
         <div className="col-start-1 col-span-1">
           <Paper />
@@ -20,8 +20,8 @@ function Grid() {
           <Rock />
         </div>
       </div>
-      <div className="absolute z-0 ">
-        <img src={bgTriangle} alt="triangle" className="pt-9" />
+      <div className="absolute z-0 w-3/5 md:w-3/4 flex justify-center">
+        <img src={bgTriangle} alt="triangle" className="pt-12 md:pt-9 " />
       </div>
     </div>
   );
