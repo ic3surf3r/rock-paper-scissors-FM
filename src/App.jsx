@@ -5,6 +5,7 @@ import { GameProvider } from "./context/GameContext";
 import Background from "./components/Background";
 import Game from "./components/Game";
 import Modal from "./components/Modal";
+import WinButtonBackground from "./components/WinButtonBackground";
 
 function App() {
   return (

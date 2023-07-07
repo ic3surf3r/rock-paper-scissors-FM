@@ -4,6 +4,7 @@ import Grid from "./Grid";
 import PaperBig from "./PaperBig";
 import RockBig from "./RockBig";
 import ScissorsBig from "./ScissorsBig";
+import WinButtonBackground from "./WinButtonBackground";
 
 function Game() {
   const { score, isPlaying, pChoice, cChoice, winner, dispatch } =
@@ -37,7 +38,11 @@ function Game() {
 
   const bigButton = (choice) => {
     if (choice === "scissors") {
-      return <ScissorsBig />;
+      return (
+        <WinButtonBackground>
+          <ScissorsBig />
+        </WinButtonBackground>
+      );
     } else if (choice === "rock") {
       return <RockBig />;
     } else {
