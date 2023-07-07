@@ -50,7 +50,7 @@ function Game() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center  font-body">
+    <div className="flex flex-col justify-center items-center font-body">
       <div className="text-white flex justify-center items-center gap-10 pt-48">
         <div className="flex flex-col">
           <p>YOU PICKED</p>

@@ -5,9 +5,9 @@ import bgTriangle from "../assets/bg-triangle.svg";
 
 function Grid() {
   return (
-    <div className="relative flex flex-col justify-center items-center pt-7">
+    <div className=" flex flex-col justify-center items-center pt-7 my-auto mx-auto">
       <div
-        className="grid grid-cols-3 grid-rows-2 w-10/12 lg:w-5/12
+        className="grid grid-cols-3 grid-rows-2 w-10/12 
       mx-auto py-5 px-6 "
       >
         <div className="col-start-1 col-span-1">
@@ -20,8 +20,8 @@ function Grid() {
           <Rock />
         </div>
       </div>
-      <div className="absolute z-0">
-        <img src={bgTriangle} alt="triangle" />
+      <div className="absolute z-0 ">
+        <img src={bgTriangle} alt="triangle" className="pt-9" />
       </div>
     </div>
   );
