@@ -10,6 +10,7 @@ export const GameProvider = ({ children }) => {
     pChoice: "",
     cChoice: "",
     winner: "",
+    open: false,
   };
 
   const [state, dispatch] = useReducer(gameReducer, initialState);

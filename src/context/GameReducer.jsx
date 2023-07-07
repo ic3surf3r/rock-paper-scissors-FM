@@ -22,6 +22,16 @@ const gameReducer = (state, action) => {
         cChoice: "",
         winner: "",
       };
+    case "OPEN_RULES":
+      return {
+        ...state,
+        open: true,
+      };
+    case "CLOSE_RULES":
+      return {
+        ...state,
+        open: false,
+      };
     default:
       return state;
   }

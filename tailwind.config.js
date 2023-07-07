@@ -20,6 +20,7 @@ export default {
       "background-Start-Color": "hsl(214, 47%, 23%)",
       "background-end-Color": "hsl(237, 49%, 15%)",
       white: "#fff",
+      black: "#000",
       "white-shadow": "#BBBFD2",
       "gradient-b1": "#2C3858",
       "gradient-b2": "#263554",

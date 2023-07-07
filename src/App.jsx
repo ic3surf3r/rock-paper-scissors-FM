@@ -1,14 +1,12 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Rules from "./components/Rules";
-import ReactModal from "react-modal";
 import { GameProvider } from "./context/GameContext";
 import Background from "./components/Background";
 import Game from "./components/Game";
+import Modal from "./components/Modal";
 
 function App() {
-  const [open, setOpen] = useState(false);
-
   return (
     <Background>
       <GameProvider>
@@ -18,6 +16,7 @@ function App() {
         </div>
         <div className="absolute bottom-8 right-8">
           <Rules />
+          <Modal />
         </div>
       </GameProvider>
     </Background>
