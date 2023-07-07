@@ -7,7 +7,7 @@ function RockBig() {
         <div className="relative">
           <div
             className="relative rounded-full bg-gradient-to-b from-rock-start to-rock-end w-48 h-48
-      flex items-center justify-center z-20 cursor-pointer "
+      flex items-center justify-center z-20  "
           >
             <div
               className="absolute rounded-full bg-white w-40 h-40

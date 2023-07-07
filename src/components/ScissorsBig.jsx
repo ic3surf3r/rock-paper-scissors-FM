@@ -6,7 +6,7 @@ function ScissorsBig() {
       <div className="relative m-auto flex items-center justify-center">
         <div
           className="relative rounded-full bg-gradient-to-b from-scissors-start to-scissors-end w-48 h-48
-              flex items-center justify-center z-40 cursor-pointer "
+              flex items-center justify-center z-40 "
         >
           <div
             className="absolute rounded-full bg-white w-40 h-40
